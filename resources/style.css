@@ -12953,7 +12953,7 @@ body {
   content: "+1 (212) ";
 }
 .about .contact-detail span.email::after {
-  content: "(at) nyu.edu";
+  content: "(at) certora.com";
   white-space: nowrap;
 }
 .about .contact-detail address {
