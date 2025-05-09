@@ -1,0 +1,248 @@
+
+// icons
+$ai-font-path: "webfonts/academicons/"; // relitive to final .css
+@import "../source/academicons/academicons.scss";
+
+$fa-font-path: "webfonts/fontawesome"; // relitive to final .css
+@import "../source/fontawesome/scss/fontawesome.scss";
+@import "../source/fontawesome/scss/solid.scss";
+@import "../source/fontawesome/scss/brands.scss";
+
+// solarized
+$solar-base03:    #002b36;
+$solar-base02:    #073642;
+$solar-base01:    #586e75;
+$solar-base00:    #657b83;
+$solar-base0:     #839496;
+$solar-base1:     #93a1a1;
+$solar-base2:     #eee8d5;
+$solar-base3:     #fdf6e3;
+$solar-yellow:    #b58900;
+$solar-orange:    #cb4b16;
+$solar-red:       #dc322f;
+$solar-magenta:   #d33682;
+$solar-violet:    #6c71c4;
+$solar-blue:      #268bd2;
+$solar-cyan:      #2aa198;
+$solar-green:     #859900;
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../source/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$body-bg:                   tint-color($solar-red, 92%);
+$primary:                   $solar-red;
+$body-color:                $solar-base03;
+$link-decoration:           none;
+$link-hover-decoration:     underline;
+$headings-line-height:      1.4;
+$font-size-base:            1rem;
+$h1-font-size:              $font-size-base * 1.75;
+$h2-font-size:              $font-size-base * 1.5;
+$h3-font-size:              $font-size-base * 1.25;
+$h4-font-size:              $font-size-base;
+$h5-font-size:              $font-size-base;
+$h6-font-size:              $font-size-base;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../source/bootstrap/scss/variables";
+@import "../source/bootstrap/scss/mixins";
+@import "../source/bootstrap/scss/utilities";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../source/bootstrap/scss/root";
+@import "../source/bootstrap/scss/reboot";
+@import "../source/bootstrap/scss/type";
+@import "../source/bootstrap/scss/images";
+@import "../source/bootstrap/scss/containers";
+@import "../source/bootstrap/scss/grid";
+
+// @import "../source/bootstrap/scss/tables";
+// @import "../source/bootstrap/scss/forms";
+// @import "../source/bootstrap/scss/buttons";
+@import "../source/bootstrap/scss/transitions";
+// @import "../source/bootstrap/scss/dropdown";
+// @import "../source/bootstrap/scss/button-group";
+@import "../source/bootstrap/scss/nav";
+@import "../source/bootstrap/scss/navbar";
+// @import "../source/bootstrap/scss/card";
+// @import "../source/bootstrap/scss/accordion";
+// @import "../source/bootstrap/scss/breadcrumb";
+// @import "../source/bootstrap/scss/pagination";
+@import "../source/bootstrap/scss/badge";
+// @import "../source/bootstrap/scss/alert";
+// @import "../source/bootstrap/scss/progress";
+// @import "../source/bootstrap/scss/list-group";
+// @import "../source/bootstrap/scss/close";
+// @import "../source/bootstrap/scss/toasts";
+// @import "../source/bootstrap/scss/modal";
+// @import "../source/bootstrap/scss/tooltip";
+// @import "../source/bootstrap/scss/popover";
+// @import "../source/bootstrap/scss/carousel";
+// @import "../source/bootstrap/scss/spinners";
+// @import "../source/bootstrap/scss/offcanvas";
+
+@import "../source/bootstrap/scss/helpers";
+@import "../source/bootstrap/scss/utilities/api";
+
+// 5. Add additional custom code here
+
+body {
+	overflow-y: scroll;
+}
+
+.container {
+	max-width: map-get($container-max-widths, "lg");
+}
+
+.navbar {
+	
+	margin-top: $spacer * 2.5;
+	margin-bottom: $spacer * 1.0;
+
+	.navbar-brand {
+		font-size: $font-size-base * 1.75;
+		font-weight: $font-weight-light;
+	}
+
+	.navbar-nav {
+		font-size: $font-size-sm;
+
+		a.nav-link:hover {
+			color: $link-hover-color;
+			text-decoration: $link-hover-decoration;
+		}
+	}
+}
+
+.content {
+	@include make-container();
+	margin-top: 2rem;
+
+	& h1 {
+		color: $solar-base02;
+	}
+	& h1::before {
+		color: $text-muted;
+		content: "# ";
+	}
+
+	h1, h2, h3 {
+		text-transform: lowercase;
+	}
+}
+
+.about {
+	.about-img {
+		// text-align: center;
+		img {
+			width: 85%;
+			max-width: 13rem;
+		}
+	}
+
+	.contact-head {
+		font-weight: $font-weight-bold;
+	}
+
+	.contact-detail {
+		padding-top: .5rem;
+
+		&:hover, &:hover a { color: $link-hover-color; }
+		span.phone::before { content: "+1 (212) "; }
+		span.email::after { content: "(at) nyu.edu"; white-space: nowrap; }
+		// span.email::after { content: "@nyu.edu"; }
+		address { margin: 0; }
+
+		.col-icon {
+			min-width: 2.5rem;
+			max-width: 2.5rem;
+		}
+	}
+
+	.contact-more {
+		padding: .75rem 0rem;
+		// text-align: center;
+
+		a { color: inherit; }
+		a:hover { color: $link-hover-color; }
+		.ai, .fab, .fas { padding: 0rem .2rem; }
+	}
+}
+
+.publications, .curatedlist {
+	.pub-item {
+		padding-bottom: .75rem;
+		line-height: $line-height-base * 1.1;
+    	counter-increment: pubCounter;
+		padding-left: .25rem;
+		list-style: decimal-leading-zero;
+
+		h1, h2, h3, h4, h5, h6 {
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+			margin: 0;
+			padding: 0;
+		}
+
+		& > a {
+			color: $body-color;
+			&:hover { color: $btn-link-hover-color; }
+		}
+
+		.note {
+			.award {
+				font-weight: bold;
+				color: $solar-orange;
+				font-size: .9rem;
+
+				&:before {
+					@extend %fa-icon;
+	  				@extend .fa;
+	  				content: fa-content($fa-var-award);
+	  				padding-right: .1rem;
+				}
+
+				&:hover {
+					text-decoration: none;
+					color: $link-hover-color;
+				}
+			}
+		}
+
+		.links a {
+			@extend .badge;
+			&:empty { display: inline-block; }
+			background: shade-color($solar-base2, 5%);
+			color: shade-color($solar-base01, 15%);
+			padding: .3rem .4rem;
+
+			&.pdf:before, &.talk:before, &.code:before, &.link:before {
+				@extend %fa-icon;
+  				@extend .fa;
+  				padding-right: .1rem;
+			}
+			&.arxiv:before, &.doi:before {
+				@extend .ai;
+				padding-right: .1rem;
+			}
+			&.pdf { color: $solar-orange; }
+			&.pdf:before{ content: fa-content($fa-var-file-pdf); }
+			&.talk:before { content: fa-content($fa-var-eye); }
+			&.code:before { content: fa-content($fa-var-code); }
+			&.link:before { content: fa-content($fa-var-link); }
+			&.arxiv:before { @extend .ai-arxiv; }
+			&.doi:before { @extend .ai-doi; }
+			&.poster:before { content: fa-content($fa-var-eye); }
+
+			&:hover {
+				// background: $link-hover-color;
+				background: tint-color($solar-base2, 15%);
+				text-decoration: none;
+				color: $link-hover-color;
+			}
+		}
+	}
+}
+
+

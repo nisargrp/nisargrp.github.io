@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="icon" type="image/svg+xml" href="resources/favicon.svg"> -->
+		<!-- <link rel="icon" type="image/png" href="resources/favicon.png"> -->
+
+		<!-- Bootstrap CSS -->
+		<link href="resources/style.css" rel="stylesheet">
+
+		<!-- Title -->
+		<title>Nisarg Patel: Homepage</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-md navbar-light border-bottom">  <!-- pt-5 pb-4 border-bottom mb-5 -->
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Nisarg Patel</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="navbar-nav font-monospace ms-auto">
+						<!-- <a class="nav-link active" aria-current="page" href="index.html">/home/wolff</a> -->
+						<a class="nav-link" href="academic/CV.pdf">CV</a>
+						<a class="nav-link" href="academic/resume.pdf">R&eacute;sum&eacute;</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Content -->
+		<main class="container">
+
+			<!-- About -->
+			<div class="content about">
+				<div class="row">
+					<div class="col-md-4 about-side">
+						<div class="row">
+							<div class="col-6 col-sm-5 col-md-12">
+								<div class="about-img p-2 pt-3 pb-4">
+									<img class="rounded-circle border" src="resources/me.jpeg">
+								</div>
+							</div>
+							<div class="col-6 col-sm-7 col-md-12 ps-md-4">
+								<div class="contact-head">Contact:</div>
+								<div class="row contact-detail">
+									<div class="col col-icon"><i class="fas fa-envelope"></i></div>
+									<div class="col"><span class="email"> nisarg </span></div>
+								</div>
+								<!-- <div class="row contact-detail">
+									<div class="col col-icon"><i class="fas fa-phone"></i></div>
+									<div class="col"><span class="phone">555-777</span></div>
+								</div> -->
+								<div class="row contact-detail">
+									<div class="col col-icon"><i class="fas fa-map-marker-alt"></i></div>
+									<div class="col">
+										<address>
+											60 Fifth Avenue<br>
+											Room 418<br>
+											New York, NY 10011<br>
+											<small><a href="https://goo.gl/maps/tznxCBet1Xx7v7Lf6">(map)</a></small>
+										</address>
+									</div>
+								</div>
+								<div class="container contact-more">
+									<!--
+									<a href="https://dblp.org/pid/169/9520.html"><i class="ai ai-dblp-square ai-2x"></i></a> -->
+									<!-- <a href="https://www.researchgate.net/profile/Sebastian-Wolff-3"><i class="ai ai-researchgate-square ai-2x"></i></a> -->
+									<!-- <a href="#"><i class="ai ai-google-scholar-square ai-2x"></i></a> -->
+									<!-- <a href="https://github.com/Wolff09"><i class="fab fa-github fa-2x"></i></a> -->
+									<!-- <a href="https://de.linkedin.com/in/swolff09"><i class="fab fa-linkedin fa-2x"></i></a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 about-main p-3">
+						<h1>About Me</h1>
+						<p class="lead">
+							I am a PhD student since 2018 at the <a href="https://cims.nyu.edu/">Courant Institute, New York University</a>, working with <a href="https://cs.nyu.edu/~wies/">Thomas Wies</a>.
+						</p>
+						<p class="lead">
+							I am broadly interested in rigorous analysis and verification of concurrent data structures. My thesis specifically focuses on wide range of concurrent search structure implementations (i.e key/value stores). My work encompasses both automated and manual approaches to verification, and advances the current state of the art. 
+						</p>
+						<p class="lead">
+							Beyond concurrent data structures, I have also worked on program synthesis for robot systems. For future, I am looking to incorporate problems from distributed systems and program synthesis into my research.   
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Publications -->
+			<div class="content publications">
+				<h1>Publications</h1>
+				<!-- 
+
+					MOVE PDFS
+
+				 -->
+				<ol class="pub-list">
+					<li class="pub-item">
+						<h6>Synthesis of Compact Strategies for Coordination Programs</h6>
+						<a href="https://kedar-namjoshi.github.io/">Kedar Namjoshi</a>
+						and <span class="me">Nisarg Patel</span>
+						<br>
+						TACAS 2022
+						<div class="links">
+							<a class="pdf" href="academic/tacas22.pdf">PDF</a>
+							<a class="talk" href="academic/tacas22_slides.pdf">Slides</a>
+						</div>
+					</li>
+					<li class="pub-item">
+						<h6>Verifying Concurrent Multicopy Search Structures</h6>
+						<span class="me">Nisarg Patel</span>, 
+						<a href="https://cs.nyu.edu/~siddharth/">Siddharth Krishna</a>,
+						<a href="https://cs.nyu.edu/~shasha/">Dennis Shasha</a> 
+						and <a href="https://cs.nyu.edu/~wies/">Thomas Wies</a>
+						<br>
+						OOPSLA 2021
+						<div class="links">
+							<a class="pdf" href="academic/oopsla21.pdf">PDF</a>
+							<a class="talk" href="academic/oopsla21_slides.pdf">Slides</a>
+							<a class="talk" href="academic/oopsla21_poster.pdf">Poster</a>
+						</div>
+					</li>
+					<li class="pub-item">
+						<h6>Automated Verification of Concurrent Search Structures</h6>
+						<a href="https://cs.nyu.edu/~siddharth/">Siddharth Krishna</a>,
+						<span class="me">Nisarg Patel</span>, 
+						<a href="https://cs.nyu.edu/~shasha/">Dennis Shasha</a> 
+						and <a href="https://cs.nyu.edu/~wies/">Thomas Wies</a>
+						<br>
+						Morgan & Claypool Publishers, 2021
+						<div class="links">
+							<a class="pdf" href="https://www.morganclaypool.com/doi/10.2200/S01089ED1V01Y202104CSL013">PDF</a>
+						</div>
+					</li>
+					<li class="pub-item">
+						<h6>Verifying Concurrent Search Structure Templates</h6>
+						<a href="https://cs.nyu.edu/~siddharth/">Siddharth Krishna</a>,
+						<span class="me">Nisarg Patel</span>, 
+						<a href="https://cs.nyu.edu/~shasha/">Dennis Shasha</a> 
+						and <a href="https://cs.nyu.edu/~wies/">Thomas Wies</a>
+						<br>
+						PLDI 2020
+						<div class="links">
+							<a class="pdf" href="academic/pldi20.pdf">PDF</a>
+							<a class="talk" href="https://www.youtube.com/watch?v=9ko821f09p0">Talk</a>
+						</div>
+					</li>
+				</ol>
+			</div>
+
+			<!-- Professional activities -->
+			<!-- <div class="content activities">
+				<h1>Professional Activities</h1>
+			</div> -->
+		</main>
+
+		<!-- Bootstrap JavaScript -->
+		<!-- TODO: more lightweight js -->
+		<script src="resources/bootstrap.bundle.min.js" async></script>
+	</body>
+</html>

@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/svg+xml" href="resources/favicon.svg">
+		<link rel="icon" type="image/png" href="resources/favicon.png">
+
+		<!-- Bootstrap CSS -->
+		<link href="resources/style.css" rel="stylesheet">
+
+		<!-- Title -->
+		<title>Wolff</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-md navbar-light border-bottom">  <!-- pt-5 pb-4 border-bottom mb-5 -->
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Sebastian Wolff</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="navbar-nav font-monospace ms-auto">
+						<a class="nav-link" href="index.html">/home/wolff</a>
+						<a class="nav-link active" aria-current="page" href="random.html">/dev/random</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Content -->
+		<main class="container">
+
+			<div class="content">
+				<p>
+					A collection of miscellaneous things...
+				</p>
+				<ul>
+					<li><a href="#dslist">A list of data structures.</a></li>
+					<li><a href="#smrlist">A list of reclamation schemes.</a></li>
+				</ul>
+			</div>
+
+			<!-- Data Structures -->
+			<div class="content curatedlist" id="dslist">
+				<h1>Data Structures</h1>
+				<p>
+					A list of high-performance, mostly non-blocking data structures.
+				</p>
+				<ol class="pub-list">
+					<li class="pub-item">
+						<b>Treiber's Stack</b>
+						R. Kent Treiber.
+						1986.
+						<i>Systems programming: coping with parallelism.</i>
+						<span class="links"><a class="link" href="https://dominoweb.draco.res.ibm.com/reports/rj5118.pdf">Link</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Michael&amp;Scott's Queue</b>
+						Maged M. Michael and Michael L. Scott.
+						1996.
+						<i>Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/248052.248106">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>DGLM Queue</b>
+						Simon Doherty, Lindsay Groves, Victor Luchangco, and Mark Moir.
+						2004.
+						<i>Formal Verification of a Practical Lock-Free Queue Algorithm.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1007/978-3-540-30232-2_7">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Vechev&amp;Yahav's DCAS Set</b>
+						Martin T. Vechev and Eran Yahav.
+						2008.
+						<i>Deriving linearizable fine-grained concurrent objects.</i>
+						(Figures 8 and 9.)
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/1375581.1375598">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Vechev&amp;Yahav's CAS Set</b>
+						Martin T. Vechev and Eran Yahav.
+						2008.
+						<i>Deriving linearizable fine-grained concurrent objects.</i>
+						(Figures 2.)
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/1375581.1375598">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>ORVVY Set</b>DBLP:
+						Peter W. O'Hearn, Noam Rinetzky, Martin T. Vechev, Eran Yahav, and Greta Yorsh.
+						2010.
+						<i>Verifying linearizability with hindsight.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/1835698.1835722">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Michael's Set</b>
+						Maged M. Michael.
+						2002.
+						<i>High performance dynamic lock-free hash tables and list-based sets.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/564870.564881">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Harris' List (Set)</b>
+						Timothy L. Harris.
+						2001.
+						<i>A Pragmatic Implementation of Non-blocking Linked-Lists.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1007/3-540-45414-4_21">DOI</a></span>
+					</li>
+					<!-- marker -->
+					<li class="pub-item">
+						<b>Elimination-backoff Stacks</b>
+						<ul>
+							<li>
+								Danny Hendler, Nir Shavit, and Lena Yerushalmi.
+								2004.
+								<i>A scalable lock-free stack algorithm.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/1007912.1007944">DOI</a></span>
+							</li>
+							<li>
+								Gal Bar-Nissan, Danny Hendler, and Adi Suissa.
+								2011.
+								<i>A Dynamic Elimination-Combining Stack Algorithm.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1007/978-3-642-25873-2_37">DOI</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>More (Optimized) Queues</b>
+						<ul>
+							<li>
+								Philippas Tsigas and Yi Zhang.
+								2001.
+								<i>A simple, fast and scalable non-blocking concurrent FIFO queue for shared memory multiprocessor systems.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/378580.378611">DOI</a></span>
+							</li>
+							<li>
+								Alex Kogan and Erez Petrank.
+								2011.
+								<i>Wait-free queues with multiple enqueuers and dequeuers.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/1941553.1941585">DOI</a></span>
+							</li>
+							<li>
+								Alex Kogan and Erez Petrank.
+								2012.
+								<i>A methodology for creating fast wait-free data structures.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/2145816.2145835">DOI</a></span>
+							</li>
+							<li>
+								Adam Morrison and Yehuda Afek.
+								2013.
+								<i></i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/2442516.2442527">DOI</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>Time-stamped Stacks and Queues Stack</b>
+						Mike Dodds, Andreas Haas, and Christoph M. Kirsch.
+						2015.
+						<i>A Scalable, Correct Time-Stamped Stack.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2676726.2676963">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Priority Queues</b>
+						<ul>
+							<li>
+								Greg Barnes.
+								1992.
+								<i>Wait-Free Algorithms for Heaps.</i>
+								<span class="links"><a class="link" href="https://dada.cs.washington.edu/research/tr/1994/12/UW-CSE-94-12-07.pdf">Link</a></span>
+							</li>
+							<li>
+								Amos Israeli and Lihu Rappoport.
+								1993.
+								<i>Efficient Wait-Free Implementation of a Concurrent Priority Queue.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1007/3-540-57271-6_23">DOI</a></span>
+							</li>
+							<li>
+								Håkan Sundell and Philippas Tsigas.
+								2003.
+								<i>Fast and Lock-Free Concurrent Priority Queues for Multi-Thread Systems.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1109/IPDPS.2003.1213189">DOI</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>Skip Lists</b>
+						<ul>
+							<li>
+								Håkan Sundell and Philippas Tsigas.
+								2003.
+								<i>Fast and Lock-Free Concurrent Priority Queues for Multi-Thread Systems.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1109/IPDPS.2003.1213189">DOI</a></span>
+							</li>
+							<li>
+								Keir Fraser.
+								2004.
+								<i>Practical lock-freedom.</i>
+								<span class="links"><a class="link" href="http://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.599193">Link</a></span>
+							</li>
+							<li>
+								Mikhail Fomitchev and Eric Ruppert.
+								2004.
+								<i>Lock-free linked lists and skip lists.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/1011767.1011776">DOI</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>Doubly-linked and double-ended queues</b>
+						<ul>
+							<li>
+								Michael Greenwald.
+								1990.
+								<i>Non-Blocking Synchronization and System Design.</i>
+								<span class="links"><a class="link" href="http://i.stanford.edu/pub/cstr/reports/cs/tr/99/1624/CS-TR-99-1624.pdf">Link</a></span>
+							</li>
+							<li>
+								Nimar S. Arora, Robert D. Blumofe, and C. Greg Plaxton.
+								1998.
+								<i>Thread Scheduling for Multiprogrammed Multiprocessors.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/277651.277678">DOI</a></span>
+							</li>
+							<li>
+								Ole Agesen, David Detlefs, Christine H. Flood, Alex Garthwaite, Paul Alan Martin, Nir Shavit,  and Guy L. Steele Jr.
+								2000.
+								<i>DCAS-based concurrent deques.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/341800.341817">DOI</a></span>
+							</li>
+							<li>
+								Maged M. Michael.
+								2003.
+								<i>CAS-Based Lock-Free Algorithm for Shared Deques.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1007/978-3-540-45209-6_92">DOI</a></span>
+							</li>
+							<li>
+								Håkan Sundell, Philippas Tsigas.
+								2004.
+								<i>Lock-Free and Practical Doubly Linked List-Based Deques Using Single-Word Compare-and-Swap.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1007/11516798_18">DOI</a></span>
+							</li>
+							<li>
+								Niloufar Shafiei.
+								2015.
+								<i>Non-Blocking Doubly-Linked Lists with Good Amortized Complexity.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.4230/LIPIcs.OPODIS.2015.35">DOI</a></span>
+							</li>
+							<li>
+								Andreas Haas.
+								2015.
+								<i>Fast Concurrent Data Structures Through Timestamping.</i>
+								<span class="links"><a class="link" href="http://www.cs.uni-salzburg.at/~ahaas/papers/thesis.pdf">Link</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>Search Trees</b>
+						<ul>
+							<li>
+								Greg Barnes.
+								1992.
+								<i>Wait-Free Algorithms for Heaps.</i>
+								<span class="links"><a class="link" href="https://dada.cs.washington.edu/research/tr/1994/12/UW-CSE-94-12-07.pdf">Link</a></span>
+							</li>
+							<li>
+								Anastasia Braginsky and Erez Petrank.
+								2012.
+								<i>A lock-free B+tree.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/2312005.2312016">DOI</a></span>
+							</li>
+							<li>
+								Justin J. Levandoski, David B. Lomet, and Sudipta Sengupta.
+								2013.
+								<i>The Bw-Tree: A B-tree for new hardware platforms.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1109/ICDE.2013.6544834">DOI</a></span>
+							</li>
+							<li>
+								Aravind Natarajan and Neeraj Mittal.
+								2014.
+								<i>Fast concurrent lock-free binary search trees.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/2555243.2555256">DOI</a></span>
+							</li>
+							<li>
+								Arunmoezhi Ramachandran and Neeraj Mittal.
+								2015.
+								<i>A Fast Lock-Free Internal Binary Search Tree.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/2684464.2684472">DOI</a></span>
+							</li>
+							<li>
+								Aravind Natarajan, Arunmoezhi Ramachandran, and Neeraj Mittal.
+								2020.
+								<i>FEAST: A Lightweight Lock-free Concurrent Binary Search Tree.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/3391438">DOI</a></span>
+							</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+
+			<!-- Reclamation -->
+			<div class="content curatedlist" id="smrlist">
+				<h1>Reclamation Schemes</h1>
+				<p>
+					Non-blocking data structures require careful reclamation of unused memory in order to avoid accessing already reclaimed memory (use-after-free bugs) and related to that avoiding the ABA problem.
+					Here is a (potentially incomplete) list of safe memory reclamation schemes for non-blocking data structures (as of mid 2021), in no particular order.
+				</p>
+				<ol class="pub-list">
+					<li class="pub-item">
+						<b>Free Lists</b>
+						<ul>
+							<li>
+								IBM.
+								1983.
+								<i>IBM System/370 Extended Architecture: Principles of Operation.</i>
+								<span class="links"><a class="link" href="https://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/370/princOps/SA22-7085-0_370-XA_Principles_of_Operation_Mar83.pdf">Link</a></span>
+							</li>
+							<li>
+								R. Kent Treiber.
+								1986.
+								<i>Systems programming: coping with parallelism.</i>
+								<span class="links"><a class="link" href="https://dominoweb.draco.res.ibm.com/reports/rj5118.pdf">Link</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>Epoch-based Reclamation (EBR)</b>
+						<ul>
+							<li>
+								Timothy L. Harris.
+								2001.
+								<i>A Pragmatic Implementation of Non-blocking Linked-Lists.</i>
+								<span class="links"><a class="doi" href="https://doi.org/10.1007/3-540-45414-4_21">DOI</a></span>
+							</li>
+							<li>
+								Keir Fraser.
+								2004.
+								<i>Practical lock-freedom.</i>
+								<span class="links"><a class="link" href="http://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.599193">Link</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>Hazard Pointers (HP)</b>
+						Maged M. Michael.
+						2002.
+						<i>Safe memory reclamation for dynamic lock-free objects using atomic reads and writes.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/571825.571829">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Non-blocking Reference Counting</b>
+						<ul>
+							<li>
+								David Detlefs, Paul Alan Martin, Mark Moir, Guy L. Steele Jr.
+								2001.
+								Lock-free reference counting.
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/383962.384016">DOI</a></span>
+							</li>
+							<li>
+								Maurice Herlihy, Victor Luchangco, Paul A. Martin, and Mark Moir.
+								2005.
+								Nonblocking memory management support for dynamic-sized data structures.
+								<span class="links"><a class="doi" href="https://doi.org/10.1145/1062247.1062249">DOI</a></span>
+							</li>
+						</ul>
+					</li>
+					<li class="pub-item">
+						<b>DEBRA</b>
+						Trevor A. Brown.
+						2015.
+						<i>Reclaiming Memory for Lock-Free Data Structures: There has to be a Better Way.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2767386.2767436">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Hyaline</b>
+						Ruslan Nikolaev and Binoy Ravindran.
+						2019.
+						<i>Hyaline: Fast and Transparent Lock-Free Memory Reclamation</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3293611.3331575">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Repeat Offender</b>
+						Maurice Herlihy, Victor Luchangco, and Mark Moir.
+						2002.
+						<i>The Repeat Offender Problem: A Mechanism for Supporting Dynamic-Sized, Lock-Free Data Structures.</i>
+						<span class="links"><a class="doi" href="">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b><i>&lt;unnamed&gt;</i></b>
+						Zahra Aghazadeh, Wojciech M. Golab, and Philipp Woelfel.
+						2014.
+						<i>Making objects writable.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2611462.2611483">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b><i>&lt;unnamed&gt;</i></b>
+						Dave Dice, Maurice Herlihy, and Alex Kogan.
+						2016.
+						<i>Fast non-intrusive memory reclamation for highly-concurrent data structures.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2926697.2926699">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Cadence</b>
+						Oana Balmau, Rachid Guerraoui, Maurice Herlihy, and Igor Zablotchi.
+						2016.
+						<i>Fast and Robust Memory Reclamation for Concurrent Data Structures.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2935764.2935790">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Dynamic Collect</b>
+						Aleksandar Dragojevic, Maurice Herlihy, Yossi Lev, and Mark Moir.
+						2011.
+						<i>On the power of hardware transactional memory to simplify memory management.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/1993806.1993821">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>StackTrack</b>
+						Dan Alistarh, Patrick Eugster, Maurice Herlihy, Alexander Matveev, and Nir Shavit.
+						2014.
+						<i>StackTrack: an automated transactional approach to concurrent memory reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2592798.2592808">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>ThreadScan</b>
+						Dan Alistarh, William M. Leiserson, Alexander Matveev, and Nir Shavit.
+						2015.
+						<i>ThreadScan: Automatic and Scalable Memory Reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2755573.2755600">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Drop the Anchor </b>
+						Anastasia Braginsky, Alex Kogan, and Erez Petrank.
+						2013.
+						<i>Drop the anchor: lightweight memory management for non-blocking data structures.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2486159.2486184">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Optimistic Access</b>
+						Nachshon Cohen and Erez Petrank.
+						2015.
+						<i>Efficient Memory Management for Lock-Free Data Structures with Optimistic Access.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2755573.2755579">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Automatic Optimistic Access</b>
+						Nachshon Cohen and Erez Petrank.
+						2015.
+						<i>Automatic memory reclamation for lock-free data structures.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2814270.2814298">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>QSense</b>
+						Oana Balmau, Rachid Guerraoui, Maurice Herlihy, and Igor Zablotchi.
+						2016.
+						<i>Fast and Robust Memory Reclamation for Concurrent Data Structures.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/2935764.2935790">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Stamp-it</b>
+						Manuel J. Pöter.
+						2018.
+						<i>Effective Memory Reclamation for Lock-Free Data Structures in C++.</i>
+						<span class="links"><a class="link" href="https://repositum.tuwien.at/handle/20.500.12708/4346">Link</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Hazard Eras (HE)</b>
+						Pedro Ramalhete and Andreia Correia.
+						2017.
+						<i>Hazard Eras&mdash;Non-Blocking Memory Reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3087556.3087588">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Interval-based Reclamation (IBR)</b>
+						Haosen Wen, Joseph Izraelevitz, Wentao Cai, H. Alan Beadle, and Michael L. Scott.
+						2018.
+						<i>Interval-based memory reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3178487.3178488">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Wait-Free Eras</b>
+						Ruslan Nikolaev and Binoy Ravindran.
+						2020.
+						<i>Universal wait-free memory reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3332466.3374540">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>PEBR</b>
+						Jeehoon Kang and Jaehwang Jung.
+						2020.
+						<i>A marriage of pointer- and epoch-based reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3385412.3385978">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Free Access</b>
+						Nachshon Cohen.
+						2018.
+						<i>Every data structure deserves lock-free memory reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3276513">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Beware&amp;Cleanup</b>
+						Anders Gidenstam, Marina Papatriantafilou, Håkan Sundell, and Philippas Tsigas.
+						2005.
+						<i>Efficient and Reliable Lock-Free Memory Reclamation Based on Reference Counting.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1109/ISPAN.2005.42">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>Isolde</b>
+						Albert Mingkun Yang and Tobias Wrigstad.
+						2017.
+						<i>Type-assisted automatic garbage collection for lock-free data structures.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3156685.3092274">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>NBR</b>
+						Ajay Singh, Trevor Brown, and Ali Mashtizadeh.
+						2021.
+						<i>NBR: neutralization based reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3437801.3441625">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						<b>VBR</b>
+						Gali Sheffi, Maurice Herlihy, and Erez Petrank
+						2021.
+						<i>VBR: Version Based Reclamation.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1145/3409964.3461817">DOI</a></span>
+					</li>
+				</ol>
+				<p>
+					For performance comparisons, you might consider, among others:
+				</p>
+				<ol class="pub-list">
+					<li class="pub-item">
+						Thomas E. Hart, Paul E. McKenney, Angela Demke Brown, and Jonathan Walpole.
+						2007.
+						<i>Performance of memory reclamation for lockless synchronization.</i>
+						<span class="links"><a class="doi" href="https://doi.org/10.1016/j.jpdc.2007.04.010">DOI</a></span>
+					</li>
+					<li class="pub-item">
+						Manuel J. Pöter.
+						2018.
+						<i>Effective Memory Reclamation for Lock-Free Data Structures in C++.</i>
+						<span class="links"><a class="link" href="https://repositum.tuwien.at/handle/20.500.12708/4346">Link</a></span>
+					</li>
+				</ol>
+			</div>
+		</main>
+
+		<!-- Bootstrap JavaScript -->
+		<!-- TODO: more lightweight js -->
+		<script src="resources/bootstrap.bundle.min.js" async></script>
+	</body>
+</html>
